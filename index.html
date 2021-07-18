@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小张学习第一页</title>
+    <style>
+        /* header里面的title是用于客户点击这个单行文字时显示完整的内容的 */
+        /* tabindex这个属性是配合用户没有鼠标时也能翻页滑动，0是最后滑到，-1是永远滑不到 */
+        /* contenteditable是能将这个div块变成用户可在网页实时编辑的编辑器 */
+        header{
+            /* 单行文字溢出用省略号省略 */
+            border: 1px solid greenyellow;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .middle{
+            background: rgb(33, 153, 233);
+            color: white;
+        }
+        .bordered{
+            border: 1px solid rgb(48, 192, 161);
+        }
+    </style>
+</head>
+<body>
+    <header tabindex="1" title="完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容完整的内容">顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告顶部广告</header>
+    <div tabindex="0" class="middle bordered" contenteditable="">
+        <main>
+            <h1>文章标题</h1>
+
+            <section>
+                <h2>第一章</h2>
+                <p>
+                    糖果那些事 文/糖果的那些事 这里没亲朋友好友，想表达什么就表达什么吧，至少不用在意那么多。我希望的是更多自己的分享而不抱怨，但目前来说，我想我内心的抱怨是不少的。也许吧，若干年后回头看看自己的成长之路，也不失为一个怀念。 我想我的内心是孤独...
+                </p>
+            </section>
+
+            <section>
+                <h3>1.1节</h3>
+                <p>
+                    我一向严格要求自己，不让自己说消极、负面的话，不容许自己去抱怨。总是会用鸡汤来激励自己、鼓励自己，让自己每天都保持好的心态，好的心情。今天在这里，请容许我说一些不那么积极、阳光的话吧！ 
+                </p>
+            </section>
+
+            <section>
+                <h3>1.2节</h3>
+                <p>
+                    人生在世，每个人都应该拥有一个梦想，拥有一个实现的目标，拥有一个前进的方向。人生就是一个拥有梦想，追求梦想，实现梦想的过程。 正值青春的我们拥有春天的朝气，拥有夏天的热烈，拥有秋天的成熟，拥有冬天的坚强。
+                </p>
+            </section>
+        </main> 
+        <aside>参考资料</aside>
+    </div>
+    <footer tabindex="-1">&copy;小张所有</footer>
+    <!-- 版权声明 -->
+</body>
+</html>
