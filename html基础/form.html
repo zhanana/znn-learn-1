@@ -1,3 +1,4 @@
+<!-- form标签就是提交，get和post方法，autocomplete自动填充 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,36 @@
     <title>form表单</title>
 </head>
 <body>
-    <form action="">
-        
+    <form action="/xxx" method="POST" id="bbb" autocomplete="off" target="_blank">
+        <input type="name" required>
+        <hr>
+        <input type="color">
+        <hr>
+        <input type="password">
+        <hr>
+        <input name=gender type="radio"/>男
+        <input name=gender type="radio"/>女
+        <hr>
+        <input name=hobby type="checkbox"/>品尝美食
+        <input name=hobby type="checkbox"/>阅读画画
+        <input name=hobby type="checkbox"/>运动健身
+        <hr>
+        <input type="file">
+        <input type="file" multiple>
+        <hr>
+        看不的input<input type="hidden">
+        <hr>
+        <textarea style="resize: none; width: 50%;height: 300px;" placeholder="生平简介："></textarea>
+        <hr>
+        <select name="" id="">
+            <option value="">-请选择-</option>
+            <option value="1">唱</option>
+            <option value="2">跳</option>
+            <option value="3">rap</option>
+        </select>
+        <hr>
+        <input type="submit">
     </form>
+
 </body>
 </html>
