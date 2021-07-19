@@ -1,0 +1,34 @@
+<!-- img标签的使用，src是所需加载图片的地址，图片因为某种原因加载失败时可以用onerror函数调用替换图片，响应式图片大小，只需设置max-width=100%即可。 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img知识点</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img{
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-wrapper">
+        <img id="xxx" src="../img/bangui.jpg" alt="这是一只傻猫--斑鳜同学">
+    </div>
+</body>
+<script>
+    xxx.onload = function(){
+        console.log("图片加载成功！")
+    }
+    xxx.onerror = function(){
+        console.log("图片加载失败！")
+        xxx.src="../img/bilibili.png"
+    }
+</script>
+</html>
