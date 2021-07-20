@@ -2,6 +2,8 @@
 <!-- 第一种利用flex布局 -->
 <!-- 第二种利用calc计算出中间的大小值 width: calc(100% - 400px); 使用calc方法时，如果div标签换行了，这个换行也是会在页面保留相应的位置-->
 <!-- 第三种BFC块级格式化上下文Block Formatting Context -->
+<!-- float与负margin的搭配使用 -->
+<!-- grid二维实现三栏布局 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +59,7 @@
         } */
 
 
-        .container{
+        /* .container{
             height: 400px;
             border: 1px solid blue;
         }
@@ -77,15 +79,59 @@
         .container .center{
             display: flex;
             background-color: rgb(76, 128, 161);
-        }
+        } */
         
+        /* .container{
+            height: 400px;
+            border: 1px solid hotpink;
+        }
+        .container div{
+            color: #fff;
+            height: 100%;
+        }
+        .container > .left{
+            float: left;
+            width: 200px;
+            margin-left: -100%;
+            background-color: lawngreen;
+        }
+        .container > .main-container{
+            float: left;
+            width: 100%;
+        }
+        .container > .main-container > .main{
+            margin-left: 200px;
+            margin-right: 200px;
+            background-color: lightgreen;
+        }
+        .container > .right{
+            float: right;
+            width: 200px;
+            margin-left: -100%;
+            background-color: lawngreen;
+        } */
+        .container{
+            height: 400px;
+            display: grid;
+            grid-template-columns: 200px auto 200px ;
+            border: 1px solid orange;
+        }
+        .container .left{
+            background-color: orangered;
+        }
+        .container .main{
+            background-color: rgb(170, 53, 11);
+        }
+        .container .right{
+            background-color: rgb(247, 199, 181);
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="left">left</div>
+        <div class="main">main</div>
         <div class="right">right</div>
-        <div class="center">center</div>
     </div>
 </body>
 </html>
