@@ -40,23 +40,23 @@ direction：是否应该轮流反向播放动画 normal 否 alternate 是
             height: 300px;
         }
         @keyframes loop {
-    0% {transform: translate(0,0);}
-    15% {transform: translate(0,0);} /* 停留1500ms */
+             0% {transform: translate(0,0);}
+             15% {transform: translate(0,0);} /* 停留1500ms */
 
-    20% {transform: translate(-20%,0);} /* 切换500ms 位移-20% */
-    35% {transform: translate(-20%,0);}
+            20% {transform: translate(-20%,0);} /* 切换500ms 位移-20% */
+            35% {transform: translate(-20%,0);}
 
-    40% {transform: translate(-40%,0);}
-    55% {transform: translate(-40%,0);}
+            40% {transform: translate(-40%,0);}
+            55% {transform: translate(-40%,0);}
 
-    60% {transform: translate(-60%,0);}
-    75% {transform: translate(-60%,0);}
+            60% {transform: translate(-60%,0);}
+            75% {transform: translate(-60%,0);}
 
-    80% {transform: translate(-80%,0);}
-    95% {transform: translate(-80%,0);}
+            80% {transform: translate(-80%,0);}
+            95% {transform: translate(-80%,0);}
 
-    100% {transform: translate(-80%,0);} /* 停留在最后一张 倒序回去 */
-}
+            100% {transform: translate(-80%,0);} /* 停留在最后一张 倒序回去 */
+        }
     </style>
 </head>
 <body>
