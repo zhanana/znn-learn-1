@@ -33,7 +33,7 @@ direction：是否应该轮流反向播放动画 normal 否 alternate 是
             height: 100%;
             font-size: 0;
             transform: translate(0,0);
-            animation: loop 10s linear infinite;
+            animation: loop 10s linear infinite alternate;
         }
         img{
             width: 500px;
@@ -55,7 +55,7 @@ direction：是否应该轮流反向播放动画 normal 否 alternate 是
     80% {transform: translate(-80%,0);}
     95% {transform: translate(-80%,0);}
 
-    100% {transform: translate(0,0);} /* 复位到第一张图片 */
+    100% {transform: translate(-80%,0);} /* 停留在最后一张 倒序回去 */
 }
     </style>
 </head>
