@@ -1,0 +1,43 @@
+<!-- 三栏布局，两边固定宽度，中间自适应 -->
+<!-- 第一种利用flex布局 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三栏布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 825px;
+            height: 400px;
+            margin: 50px auto;
+            display: flex;
+        }
+        .left{
+            width: 200px;
+            background-color:  goldenrod;
+        }
+        .center{
+            flex:1;
+            background-color:  rgb(41, 201, 36);
+        }
+        .right{
+            width: 200px;
+            background-color:  rgb(36, 195, 201);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
