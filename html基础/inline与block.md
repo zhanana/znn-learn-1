@@ -12,8 +12,12 @@
 
 ## 行内元素列表
 
-- <strong> <span> <img> <em> <a> <botton> <input> <label> <br> <map>等
+```javascript
+<strong> <span> <img> <em> <a> <botton> <input> <label> <br> <map>等
+```
 
 ## 块级元素列表
 
-- <div> <h1~h6> <article> <aside> <form> <footer> <hr> <ol> <ul> <section>等
+```javascript
+<div> <h1~h6> <article> <aside> <form> <footer> <hr> <ol> <ul> <section>等
+```
