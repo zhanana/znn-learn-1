@@ -1,0 +1,73 @@
+<!-- 用纯css实现图片轮播 -->
+<!-- 
+animation: name duration timing-function delay iteration-count direction
+
+name: 动画名
+duration： 动画持续时间 设置为0则不执行
+timing-function：动画速度曲线
+delay：动画延迟开始时间 设置为0则不延迟
+iteration-count：动画循环次数 设置为infinite则无限次循环
+direction：是否应该轮流反向播放动画 normal 否 alternate 是
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片轮播</title>
+    <link rel="stylesheet" href="../css基础/reset.css">
+    <style>
+        .carousel{
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel-wrapper{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 500%;
+            height: 100%;
+            font-size: 0;
+            transform: translate(0,0);
+            animation: loop 10s linear infinite;
+        }
+        img{
+            width: 500px;
+            height: 300px;
+        }
+        @keyframes loop {
+    0% {transform: translate(0,0);}
+    15% {transform: translate(0,0);} /* 停留1500ms */
+
+    20% {transform: translate(-20%,0);} /* 切换500ms 位移-20% */
+    35% {transform: translate(-20%,0);}
+
+    40% {transform: translate(-40%,0);}
+    55% {transform: translate(-40%,0);}
+
+    60% {transform: translate(-60%,0);}
+    75% {transform: translate(-60%,0);}
+
+    80% {transform: translate(-80%,0);}
+    95% {transform: translate(-80%,0);}
+
+    100% {transform: translate(0,0);} /* 复位到第一张图片 */
+}
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-wrapper">
+            <img src="../img/bangui.jpg" alt="">
+            <img src="../img/bilibili.png" alt="">
+            <img src="../img/H5新标签.png" alt="">
+            <img src="../img/IMG_4949.JPG" alt="">
+            <img src="../img/IMG_4988.JPG" alt="">
+        </div>
+    </div>
+</body>
+</html>
