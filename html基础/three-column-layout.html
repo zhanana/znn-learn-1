@@ -1,5 +1,6 @@
 <!-- 三栏布局，两边固定宽度，中间自适应 -->
 <!-- 第一种利用flex布局 -->
+<!-- 第二种利用calc计算出中间的大小值 width: calc(100% - 400px); 使用calc方法时，如果div标签换行了，这个换行也是会在页面保留相应的位置-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +14,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        .container{
+        /* .container{
             height: 400px;
             display: flex;
         }
@@ -28,14 +29,33 @@
         .right{
             width: 200px;
             background-color:  rgb(36, 195, 201);
+        } */
+        .container{
+            height: 400px;
+            background-color: hotpink;
+        }
+        .container > div{
+            display: inline-block;
+            height: 100%;
+            color: indigo;
+        }
+        .container > .left{
+            width: 200px;
+            background-color: rgb(231, 170, 170);
+        }
+        .container > .center{
+            width: calc(100% - 400px);
+            background-color: lightsalmon;
+        }
+        .container > .right{
+            width: 200px;
+            background-color: rgb(235, 26, 26);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="left"></div>
-        <div class="center"></div>
-        <div class="right"></div>
+        <div class="left">left</div><div class="center">center</div><div class="right">right</div>
     </div>
 </body>
 </html>
