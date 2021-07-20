@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水平、垂直居中</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .abc{
+            border: 1px solid orangered;
+            text-align: center;
+        }
+        .abcd{
+            width: 400px;
+            border: 1px solid gold;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .abcde1{
+            display: table;
+            margin: 0 auto;
+            border: 1px solid tomato;
+        }
+        .abcde2{
+            text-align: center;
+        }
+        .abcde2 > .abcde21{
+            display: inline-block;
+            border: 1px solid slateblue;
+        }
+        .abcde3{
+            display: flex;
+            justify-content: center;
+            border: 1px solid peru;
+        }
+        .bcd{
+            width: 200px;
+            height: 200px;
+            border: 1px solid navy;
+            display: table;
+        }
+        .bcd > .bcd1{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .bcde{
+            width: 200px;
+            height: 200px;
+            border: 1px solid khaki;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="abc">
+        <span>行内元素水平居中</span>
+    </div>
+    <div class="abcd">
+        定宽块级元素水平居中
+    </div>
+    <div class="abcde1">
+        不定宽块级元素水平居中方法1
+    </div>
+    <div class="abcde2">
+        <div class="abcde21">
+        不定宽块级元素水平居中方法2
+        </div>
+        <div class="abcde21">
+        不定宽块级元素水平居中方法2
+        </div>
+    </div>
+    <div class="abcde3">
+        <div class="abcde31">
+        不定宽块级元素水平居中方法3
+        </div>
+        <div class="abcde31">
+        不定宽块级元素水平居中方法3
+        </div>
+    </div>
+    <div class="bcd">
+        <div class="bcd1">多行文本垂直居中</div>
+    </div>
+    <div class="bcde">
+        <div class="bcde1">块级元素垂直居中</div>
+    </div>
+</body>
+</html>
