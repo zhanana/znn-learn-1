@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo1</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <p>玩家1：小明</p>
+    <button>点我啊</button>
+    <script>
+        // const para = document.querySelector('p');
+        // para.addEventListener('click',updateName);
+        // function updateName(){
+        //     let name = prompt('输入一个新的名字:');
+        //     para.textContent = '玩家1:'+name;
+        // }
+        function createParagraph(){
+            let para = document.createElement('p');
+            para.textContent = '你点击了这个按钮！';
+            document.body.appendChild(para);
+        }
+        const buttons = document.querySelectorAll('button');
+        for(let i = 0; i<buttons.length; i++){
+            buttons[i].addEventListener('click',createParagraph)
+        }
+</script>
+</body>
+</html>
